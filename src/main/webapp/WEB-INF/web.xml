@@ -6,11 +6,20 @@
   <display-name>Archetype Created Web Application</display-name>
   
   <servlet>
-    <servlet-name>Servlet1</servlet-name>
+    <servlet-name>lifeCycleServlet</servlet-name>
     <servlet-class>com.sxl.LifeCycleServlet</servlet-class>
+    <init-param>
+      <param-name>country</param-name>
+      <param-value>China</param-value>
+    </init-param>
+    <init-param>
+      <param-name>age</param-name>
+      <param-value>18</param-value>
+    </init-param>
   </servlet>
+
   <servlet-mapping>
-    <servlet-name>Servlet1</servlet-name>
+    <servlet-name>lifeCycleServlet</servlet-name>
     <url-pattern>/lifecycle</url-pattern>
   </servlet-mapping>
 
