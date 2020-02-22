@@ -3,8 +3,13 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
-  
+  <display-name>Servlet Learning Web Application</display-name>
+
+  <context-param>
+    <param-name>language</param-name>
+    <param-value>Java</param-value>
+  </context-param>
+
   <servlet>
     <servlet-name>lifeCycleServlet</servlet-name>
     <servlet-class>com.sxl.LifeCycleServlet</servlet-class>

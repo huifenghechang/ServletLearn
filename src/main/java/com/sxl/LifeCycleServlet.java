@@ -12,7 +12,10 @@ public class LifeCycleServlet implements Servlet {
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
         String country = servletConfig.getInitParameter("country");
-        System.out.println("Init param :  "+ "country = " + country);
+        System.out.println("Init Servlet param :  "+ "country = " + country);
+        ServletContext context = servletConfig.getServletContext();
+        String language = context.getInitParameter("language");
+        System.out.println("Init Context param :  "+ "language = " + language);
         System.out.println("Servlet init ... ");
     }
 
@@ -23,6 +26,9 @@ public class LifeCycleServlet implements Servlet {
 
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
+        String  param = servletRequest.getLocalName();
+        System.out.println("Servlet parama ... " + param);
+
         System.out.println("Servlet service ... ");
     }
 
