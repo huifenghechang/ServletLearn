@@ -11,6 +11,8 @@ import java.io.IOException;
 public class LifeCycleServlet implements Servlet {
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
+        String country = servletConfig.getInitParameter("country");
+        System.out.println("Init param :  "+ "country = " + country);
         System.out.println("Servlet init ... ");
     }
 
