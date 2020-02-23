@@ -2,7 +2,10 @@
  "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
-<web-app>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         id="WebApp_ID" version="2.5">
   <display-name>Servlet Learning Web Application</display-name>
 
   <context-param>
@@ -11,8 +14,17 @@
   </context-param>
 
   <servlet>
+    <servlet-name>httpMethodServlet</servlet-name>
+    <servlet-class>com.sxl.servlet.HttpMethodServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>httpMethodServlet</servlet-name>
+    <url-pattern>/httpMethod</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
     <servlet-name>lifeCycleServlet</servlet-name>
-    <servlet-class>com.sxl.LifeCycleServlet</servlet-class>
+    <servlet-class>com.sxl.servlet.LifeCycleServlet</servlet-class>
     <init-param>
       <param-name>country</param-name>
       <param-value>China</param-value>
@@ -22,10 +34,17 @@
       <param-value>18</param-value>
     </init-param>
   </servlet>
-
   <servlet-mapping>
     <servlet-name>lifeCycleServlet</servlet-name>
     <url-pattern>/lifecycle</url-pattern>
   </servlet-mapping>
-
+  
+  <servlet>
+    <servlet-name>demoHttpServlet</servlet-name>
+    <servlet-class>com.sxl.servlet.DemoHttpServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>demoHttpServlet</servlet-name>
+    <url-pattern>/httpServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

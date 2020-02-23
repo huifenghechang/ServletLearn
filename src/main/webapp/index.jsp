@@ -5,11 +5,36 @@
     <a href="/lifecycle">/lifecycle</a>
 
     <h3>Service Test</h3>
-    <form action="/lifecycle" method="post">
-        my lover: <input type="text" name="name">
+    <form action="/httpMethod" method="post">
+
+        user: <input type="text" name="user">
         <br>
-        pass: <input type="text" name="pass">
+        password: <input type="text" name="password">
+        interesting:
+
+        <input type="checkbox" name="interesting" value="reading"/>Reading
+        <input type="checkbox" name="interesting" value="game"/>Game
+        <input type="checkbox" name="interesting" value="party"/>Party
+        <input type="checkbox" name="interesting" value="shopping"/>Shopping
+        <input type="checkbox" name="interesting" value="sport"/>Sport
+        <input type="checkbox" name="interesting" value="tv"/>TV
+
         <input type="submit" value="Submit"/>
+    </form>
+
+    <h3>HttpServlet Test</h3>
+    <form action="/httpServlet" method="get">
+        org:<input type="text" name="org">
+        location:<input type="text" name="location">
+
+        <input type="submit" value="GetMethodSubmit">
+    </form>
+
+    <form action="/httpServlet" method="post">
+        org:<input type="text" name="org">
+        location:<input type="text" name="location">
+
+        <input type="submit" value="PostMethodSubmit">
     </form>
 
     </body>

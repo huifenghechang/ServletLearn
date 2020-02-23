@@ -1,4 +1,4 @@
-package com.sxl;
+package com.sxl.servlet;
 
 import javax.servlet.*;
 import java.io.IOException;
