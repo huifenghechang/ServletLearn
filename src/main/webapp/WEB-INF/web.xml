@@ -9,9 +9,29 @@
   <display-name>Servlet Learning Web Application</display-name>
 
   <context-param>
+    <param-name>encoding</param-name>
+    <param-value>UTF-8</param-value>
+  </context-param>
+
+  <!-- 不需要拦截(或检查)的 URL 列表 -->
+  <context-param>
+    <param-name>uncheckedUrls</param-name>
+    <param-value>/login/a.jsp,/login/list.jsp,/login/login.jsp,/login/doLogin.jsp,/login/b.jsp</param-value>
+  </context-param>
+
+  <context-param>
     <param-name>language</param-name>
     <param-value>Java</param-value>
   </context-param>
+
+  <filter>
+    <filter-name>helloFilter</filter-name>
+    <filter-class>com.sxl.filter.HelloFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>helloFilter</filter-name>
+    <url-pattern>/test.jsp</url-pattern>
+  </filter-mapping>
 
   <servlet>
     <servlet-name>httpMethodServlet</servlet-name>
