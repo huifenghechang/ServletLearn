@@ -11,7 +11,8 @@
     <h3>a. Servlet Demo</h3>
     <a href="${APP_PATH}/a_servletApp/servlet.jsp">lifecycle of Servlet</a>
 
-
+    <h3>c. Cookie Demo</h3>
+    <a href="${APP_PATH}/c_cookieApp/autoLogin/mine.jsp">Cookie Demo</a>
     </body>
 
 </html>
