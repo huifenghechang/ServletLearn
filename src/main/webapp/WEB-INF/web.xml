@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE web-app PUBLIC
  "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
@@ -26,25 +28,17 @@
 
   <filter>
     <filter-name>helloFilter</filter-name>
-    <filter-class>com.sxl.filter.HelloFilter</filter-class>
+    <filter-class>com.sxl.b_filter.HelloFilter</filter-class>
   </filter>
   <filter-mapping>
     <filter-name>helloFilter</filter-name>
     <url-pattern>/test.jsp</url-pattern>
   </filter-mapping>
 
-  <servlet>
-    <servlet-name>httpMethodServlet</servlet-name>
-    <servlet-class>com.sxl.servlet.HttpMethodServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>httpMethodServlet</servlet-name>
-    <url-pattern>/httpMethod</url-pattern>
-  </servlet-mapping>
-
+<!--探究Servlet生命周期的Servlet-->
   <servlet>
     <servlet-name>lifeCycleServlet</servlet-name>
-    <servlet-class>com.sxl.servlet.LifeCycleServlet</servlet-class>
+    <servlet-class>com.sxl.a_servlet.A01_LifeCycleServlet</servlet-class>
     <init-param>
       <param-name>country</param-name>
       <param-value>China</param-value>
@@ -53,15 +47,26 @@
       <param-name>age</param-name>
       <param-value>18</param-value>
     </init-param>
+
   </servlet>
   <servlet-mapping>
     <servlet-name>lifeCycleServlet</servlet-name>
     <url-pattern>/lifecycle</url-pattern>
   </servlet-mapping>
-  
+
+
+  <servlet>
+    <servlet-name>httpMethodServlet</servlet-name>
+    <servlet-class>com.sxl.a_servlet.A02_HttpMethodServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>httpMethodServlet</servlet-name>
+    <url-pattern>/httpMethod</url-pattern>
+  </servlet-mapping>
+
   <servlet>
     <servlet-name>demoHttpServlet</servlet-name>
-    <servlet-class>com.sxl.servlet.DemoHttpServlet</servlet-class>
+    <servlet-class>com.sxl.a_servlet.A03_DemoHttpServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>demoHttpServlet</servlet-name>

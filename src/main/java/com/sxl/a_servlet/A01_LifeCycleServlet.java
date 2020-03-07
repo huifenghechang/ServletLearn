@@ -1,14 +1,15 @@
-package com.sxl.servlet;
+package com.sxl.a_servlet;
 
 import javax.servlet.*;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  * @Auther: 苏小乐
  * @Date: 2020/2/22 21:56
  * @Description:
  */
-public class LifeCycleServlet implements Servlet {
+public class A01_LifeCycleServlet implements Servlet {
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
         String country = servletConfig.getInitParameter("country");
@@ -30,6 +31,17 @@ public class LifeCycleServlet implements Servlet {
         System.out.println("Servlet parama ... " + param);
 
         System.out.println("Servlet service ... ");
+
+        servletResponse.setContentType("text/html");
+        PrintWriter out = servletResponse.getWriter();
+        out.println("<html>");
+        out.println("<head>");
+        out.println("<title>LifeStyleServlet ran!</title>");
+        out.println("</head>");
+        out.println("<body>");
+        out.println("<h1>LifeStyleServlet is print in console!</h1>");
+        out.println("</body>");
+        out.println("</html>");
     }
 
     @Override

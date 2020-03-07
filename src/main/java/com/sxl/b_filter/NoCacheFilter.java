@@ -1,4 +1,4 @@
-package com.sxl.filter;
+package com.sxl.b_filter;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpFilter;

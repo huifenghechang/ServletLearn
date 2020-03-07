@@ -1,41 +1,16 @@
+
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    String APP_PATH = request.getContextPath();
+%>
+<c:set value="${pageContext.request.contextPath}" var="APP_PATH" scope="page"/>
 <html>
     <body>
-    <h2>Hello Servlet!</h2>
-    <h3>Servlet LifeCycle Demo</h3>
-    <a href="/lifecycle">/lifecycle</a>
+    <h2>Welcome to Web Learning!</h2>
 
-    <h3>Service Test</h3>
-    <form action="/httpMethod" method="post">
+    <h3>a. Servlet Demo</h3>
+    <a href="${APP_PATH}/a_servletApp/servlet.jsp">lifecycle of Servlet</a>
 
-        user: <input type="text" name="user">
-        <br>
-        password: <input type="text" name="password">
-        interesting:
-
-        <input type="checkbox" name="interesting" value="reading"/>Reading
-        <input type="checkbox" name="interesting" value="game"/>Game
-        <input type="checkbox" name="interesting" value="party"/>Party
-        <input type="checkbox" name="interesting" value="shopping"/>Shopping
-        <input type="checkbox" name="interesting" value="sport"/>Sport
-        <input type="checkbox" name="interesting" value="tv"/>TV
-
-        <input type="submit" value="Submit"/>
-    </form>
-
-    <h3>HttpServlet Test</h3>
-    <form action="/httpServlet" method="get">
-        org:<input type="text" name="org">
-        location:<input type="text" name="location">
-
-        <input type="submit" value="GetMethodSubmit">
-    </form>
-
-    <form action="/httpServlet" method="post">
-        org:<input type="text" name="org">
-        location:<input type="text" name="location">
-
-        <input type="submit" value="PostMethodSubmit">
-    </form>
 
     </body>
 

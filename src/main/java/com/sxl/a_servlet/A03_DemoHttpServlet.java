@@ -1,4 +1,4 @@
-package com.sxl.servlet;
+package com.sxl.a_servlet;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
  * @Date: 2020/2/23 22:21
  * @Description:
  */
-public class DemoHttpServlet extends HttpServlet {
+public class A03_DemoHttpServlet extends HttpServlet {
     private static final Long serialVersionUID = 1L;
 
     protected void doGet(HttpServletRequest request,HttpServletResponse response){

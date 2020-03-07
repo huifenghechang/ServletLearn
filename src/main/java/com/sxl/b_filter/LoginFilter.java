@@ -1,4 +1,4 @@
-package com.sxl.filter;
+package com.sxl.b_filter;
 
 
 import javax.servlet.FilterChain;
@@ -23,6 +23,6 @@ public class LoginFilter extends HttpFilter {
 
     @Override
     public void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws IOException, ServletException {
-        
+
     }
 }
