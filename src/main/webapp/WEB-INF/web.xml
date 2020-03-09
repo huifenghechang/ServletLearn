@@ -26,6 +26,7 @@
     <param-value>Java</param-value>
   </context-param>
 
+  <!--b. filter的使用方法-->
   <filter>
     <filter-name>helloFilter</filter-name>
     <filter-class>com.sxl.b_filter.HelloFilter</filter-class>
@@ -35,7 +36,9 @@
     <url-pattern>/test.jsp</url-pattern>
   </filter-mapping>
 
-<!--探究Servlet生命周期的Servlet-->
+
+  <!--a.01 探究Servlet生命周期的Servlet-->
+
   <servlet>
     <servlet-name>lifeCycleServlet</servlet-name>
     <servlet-class>com.sxl.a_servlet.A01_LifeCycleServlet</servlet-class>
@@ -55,6 +58,7 @@
   </servlet-mapping>
 
 
+  <!--a.02 探究Http请求中的GET 和 POST方法的异同-->
   <servlet>
     <servlet-name>httpMethodServlet</servlet-name>
     <servlet-class>com.sxl.a_servlet.A02_HttpMethodServlet</servlet-class>
@@ -64,6 +68,7 @@
     <url-pattern>/httpMethod</url-pattern>
   </servlet-mapping>
 
+  <!--a.03 探究HttpServlet类的用法-->
   <servlet>
     <servlet-name>demoHttpServlet</servlet-name>
     <servlet-class>com.sxl.a_servlet.A03_DemoHttpServlet</servlet-class>
@@ -71,5 +76,33 @@
   <servlet-mapping>
     <servlet-name>demoHttpServlet</servlet-name>
     <url-pattern>/httpServlet</url-pattern>
+  </servlet-mapping>
+
+  <!--e. 探究请求转发与重定向的区别-->
+  <servlet>
+    <servlet-name>forwardServlet</servlet-name>
+    <servlet-class>com.sxl.e_forwardRedirect.ForwardServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>forwardServlet</servlet-name>
+    <url-pattern>/forwardServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>redirectServlet</servlet-name>
+    <servlet-class>com.sxl.e_forwardRedirect.RedirectServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>redirectServlet</servlet-name>
+    <url-pattern>/redirectServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>helloServlet</servlet-name>
+    <servlet-class>com.sxl.e_forwardRedirect.HelloServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>helloServlet</servlet-name>
+    <url-pattern>/helloServlet</url-pattern>
   </servlet-mapping>
 </web-app>

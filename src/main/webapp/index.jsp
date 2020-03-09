@@ -15,4 +15,9 @@
     <a href="${APP_PATH}/c_cookieApp/autoLogin/mine.jsp">Cookie Demo</a>
     </body>
 
+    <h3>e. Forward & Redirect Demo</h3>
+    <%--e_forRedApp/forRedIndex.jsp--%>
+    <a href="${APP_PATH}/e_forRedApp/forRedIndex.jsp">Forward & Redirect Demo</a>
+    </body>
+
 </html>
